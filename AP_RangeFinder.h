@@ -101,6 +101,8 @@ public:
     // 10Hz from main loop
     void update(void);
     
+    void timer(void *parameter);
+    
     uint16_t distance_cm(void) const;
 
     static RangeFinder *get_singleton(void) { return _singleton; }

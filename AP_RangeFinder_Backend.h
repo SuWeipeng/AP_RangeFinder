@@ -28,6 +28,8 @@ public:
 
     // update the state structure
     virtual void update() = 0;
+    
+    virtual void timer(void *parameter) = 0;
 
     uint16_t distance_cm() const { return state.distance_cm; }
     uint16_t voltage_mv() const { return state.voltage_mv; }

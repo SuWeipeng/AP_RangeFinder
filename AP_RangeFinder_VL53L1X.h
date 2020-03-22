@@ -17,6 +17,8 @@ public:
 
     // update state
     void update(void) override;
+    
+    void timer(void *parameter);
 
 private:
     enum DeviceError : uint8_t
@@ -1241,7 +1243,6 @@ private:
     AP_RangeFinder_VL53L1X(RangeFinder::RangeFinder_State &_state);
 
     bool init(DistanceMode mode);
-    void timer();
 
     // check sensor ID
     bool check_id(void);

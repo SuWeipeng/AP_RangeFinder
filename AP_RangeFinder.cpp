@@ -79,4 +79,12 @@ uint16_t RangeFinder::distance_cm(void) const
   }
 }
 
+void RangeFinder::timer(void *parameter)
+{
+  if (drivers != nullptr) 
+  {
+    drivers->timer(parameter);
+  }
+}
+
 RangeFinder *RangeFinder::_singleton;

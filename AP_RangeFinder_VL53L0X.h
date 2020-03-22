@@ -13,13 +13,14 @@ public:
   
   // update state
   void update(void) override;
+  
+  void timer(void *parameter) override;
 
 private:
     // constructor
     AP_RangeFinder_VL53L0X(RangeFinder::RangeFinder_State &_state);
 
     bool init();
-    void timer();
 
     // check sensor ID
     bool check_id(void);

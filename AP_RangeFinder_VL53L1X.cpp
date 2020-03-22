@@ -559,7 +559,7 @@ bool AP_RangeFinder_VL53L1X::write_register32(uint16_t reg, uint32_t value)
 /*
   timer called at 20Hz
 */
-void AP_RangeFinder_VL53L1X::timer()
+void AP_RangeFinder_VL53L1X::timer(void *parameter)
 {
     uint16_t range_mm;
     if ((get_reading(range_mm)) && (range_mm <= 4000)) {
@@ -573,7 +573,6 @@ void AP_RangeFinder_VL53L1X::timer()
 */
 void AP_RangeFinder_VL53L1X::update(void)
 {
-    timer();
     if (counter > 0) {
         state.distance_cm = sum_mm / (10*counter);
         state.last_reading_ms = HAL_GetTick();
