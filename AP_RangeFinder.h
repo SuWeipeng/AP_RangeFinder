@@ -15,10 +15,7 @@
 #pragma once
 
 #include <stdint.h>
-#include <vectorN.h>
 #include <sparse-endian.h>
-
-typedef VectorN<float,3> Vector3f;
 
 #define RANGEFINDER_GROUND_CLEARANCE_CM_DEFAULT 10
 #define RANGEFINDER_PREARM_ALT_MAX_CM           200

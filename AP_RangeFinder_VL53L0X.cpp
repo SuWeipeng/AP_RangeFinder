@@ -21,6 +21,7 @@
 #include "AP_RangeFinder_VL53L0X.h"
 #include <entry.h>
 #include <stdio.h>
+#include <string.h>
 
 static struct rt_i2c_bus_device *i2c_bus;
 
